@@ -5,6 +5,7 @@
         "context": "..",
         "args": {
             // Example args
+            "TAG": "2.10.0",
             "USERNAME": "developer"
             // "GIT_PROVIDER": "gitlab.com",
             // ** Sensitive info. Don't do this. **
@@ -40,7 +41,6 @@
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
     
-    // TODO: Create a project directory structure for tensorflow model development and testing 
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "chmod +x scripts/create-project-dir-structure.sh && ./scripts/create-project-dir-structure.sh",
     

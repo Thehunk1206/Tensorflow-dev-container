@@ -1,4 +1,6 @@
-FROM tensorflow/tensorflow:2.10.0
+ARG TAG=2.10.0
+
+FROM tensorflow/tensorflow:${TAG}
 
 LABEL   name="tensorflow-dev-container" \
         maintainer="Tauhid Khan" \
@@ -54,5 +56,3 @@ RUN echo ${USERNAME}:${USERNAME} | chpasswd;
 RUN adduser ${USERNAME} sudo
 
 USER ${USERNAME}
-
-# Cre
