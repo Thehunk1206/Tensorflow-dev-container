@@ -5,7 +5,6 @@
         "context": "..",
         "args": {
             // Example args
-            "PROJECT_NAME": "dummy-project",
             "USERNAME": "developer"
             // "GIT_PROVIDER": "gitlab.com",
             // ** Sensitive info. Don't do this. **
@@ -28,10 +27,6 @@
         },
         "terminal.integrated.defaultProfile.linux": "zsh"
     },
-    
-    // "runArgs": [
-    //     "--privileged"
-    // ],
 
     "extensions": [
 		"ms-python.python",
@@ -47,7 +42,7 @@
     
     // TODO: Create a project directory structure for tensorflow model development and testing 
     // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "pip install --user -r requirements.txt",
+    "postCreateCommand": "chmod +x create-project-dir-structure.sh && ./create-project-dir-structure.sh",
     
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/home/developer/workspace"

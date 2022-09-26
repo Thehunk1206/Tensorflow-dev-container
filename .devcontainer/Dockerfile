@@ -13,10 +13,11 @@ RUN apt-get update -y && apt-get upgrade -y
 
 # install basic packages for dev environment
 RUN apt-get install -y --no-install-recommends \
-    git \
+    git  \
     wget \
+    tree \
     curl \
-    zip \
+    zip  \
     xz-utils \
     libglu1-mesa \
     unzip \
@@ -40,7 +41,7 @@ WORKDIR ${DEVELOPER_HOME}
 # Copy .zshrc
 COPY ./.devcontainer/docker.zshrc.sh ${DEVELOPER_HOME}/.zshrc
 
-# Install python packages
+# Install python packages from requirements.txt
 COPY ./.devcontainer/requirements.txt ${DEVELOPER_HOME}/workspace/
 RUN pip install --upgrade pip
 RUN pip install --user -r ${DEVELOPER_HOME}/workspace/requirements.txt
@@ -53,3 +54,5 @@ RUN echo ${USERNAME}:${USERNAME} | chpasswd;
 RUN adduser ${USERNAME} sudo
 
 USER ${USERNAME}
+
+# Cre
