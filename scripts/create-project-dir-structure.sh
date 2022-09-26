@@ -1,5 +1,5 @@
 # Create a directory structure for a new TensorFlow project
-!/bin/zsh
+!/bin/sh
 
 echo "Creating directory structure for new TensorFlow project"
 
