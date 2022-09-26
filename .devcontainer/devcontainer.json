@@ -1,0 +1,54 @@
+{
+    "name": "tensorflow-dev-container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            // Example args
+            "PROJECT_NAME": "dummy-project",
+            "USERNAME": "developer"
+            // "GIT_PROVIDER": "gitlab.com",
+            // ** Sensitive info. Don't do this. **
+            // "GIT_USERNAME": "${localEnv:GIT_USERNAME}",
+            // "GIT_PASSWORD": "${localEnv:GIT_PASSWORD}"
+        }
+    },
+
+    "remoteUser": "developer",
+
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/usr/bin/bash",
+                "icon": "terminal-bash"
+            },
+            "zsh": {
+                "path": "/usr/bin/zsh"
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh"
+    },
+    
+    // "runArgs": [
+    //     "--privileged"
+    // ],
+
+    "extensions": [
+		"ms-python.python",
+		"eamodio.gitlens",
+		"ms-python.vscode-pylance",
+		"mhutchie.git-graph",
+		"oderwat.indent-rainbow",
+		"GitHub.copilot"
+	],
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+    
+    // TODO: Create a project directory structure for tensorflow model development and testing 
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "pip install --user -r requirements.txt",
+    
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/home/developer/workspace"
+}
