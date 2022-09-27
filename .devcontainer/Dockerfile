@@ -26,6 +26,7 @@ RUN apt-get install -y --no-install-recommends \
     gnupg \
     zsh \                   
     apt-utils \
+    zsh-autosuggestions \
     htop \
     nano \
     sudo
