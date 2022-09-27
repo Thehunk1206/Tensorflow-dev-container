@@ -42,7 +42,7 @@
 	// "forwardPorts": [],
     
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "chmod +x scripts/create-project-dir-structure.sh && ./scripts/create-project-dir-structure.sh",
+    "postCreateCommand": "chmod +x .devcontainer/create-project-dir-structure.sh && ./.devcontainer/create-project-dir-structure.sh",
     
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/home/developer/workspace"
