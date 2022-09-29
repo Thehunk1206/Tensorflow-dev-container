@@ -17,7 +17,7 @@
 A Development container configuration files or "definitions" for developing and training [Tensorflow](https://tensorflow.org) models using VScode [Remote - Container](https://aka.ms/vscode-remote/download/containers) extension.
 
 * Lets you develope and train Tensorflow models in a container, without any hustle of installing Tensorflow and other dependencies on your local machine.
-* Supports both CPU and GPU based Tensorflow models. To use Tesorflow-GPU, change the build argument in `.devcontainer/devcontainer.json` file from `TAG=2.X.X` to `TAG=2.X.X-gpu` and rebuild the container.
+* Supports both CPU and GPU based Tensorflow models. To use Tesorflow-GPU, change the build argument in `.devcontainer/devcontainer.json` file from `TAG=2.X.X` to `TAG=2.X.X-gpu` and rebuild the container.(NOTE: Tensorflow-GPU is not tested, if anyonne has GPU on their machine do try it and update the repo.)
 * Creates a typical Tensorflow project directory structure in the container.
 * The container includes zsh as default shell.
 
@@ -26,5 +26,14 @@ A Development container configuration files or "definitions" for developing and 
 + [VScode](https://code.visualstudio.com/download)
 + [Remote - Container](https://aka.ms/vscode-remote/download/containers) extension for VScode
 
+## Usage
+* Clone this repository using command ```git clone https://github.com/Thehunk1206/Tensorflow-dev-container.git``` or use this [template](https://github.com/Thehunk1206/Tensorflow-dev-container/generate) to create your own repository on github.
+* Change dir into clone folder by `cd Tensorflow-dev-container/`
+* Open the folder in VS Code `code .`
+* Install [remote-container](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) extention from vscode extension marketplace.
+* Once Extension is install, Click 'Re-open in container' when prompt OR to open manually, press F1 and type `Remote-Container:Rebuild and Reopen in container`
+* Wait to build and open the image and container. (This may take while for the first time.)
+* If you want to install some python dependencies during build, add them in `.devcontainer/requirements.txt`
 
-
+## Reference
+Do check the [flutter-dev-container](https://github.com/predatorx7/flutterv2-vscode-devcontainer) for flutter developers
