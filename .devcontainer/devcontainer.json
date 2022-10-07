@@ -29,6 +29,13 @@
         "terminal.integrated.defaultProfile.linux": "zsh"
     },
 
+    "runArgs": [
+        // "--gpus",
+        // "all",  
+        // "'--device=0'", // GPU ID
+        // "'--device=1'" // GPU ID
+    ],
+
     "extensions": [
 		"ms-python.python",
 		"eamodio.gitlens",

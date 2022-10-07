@@ -17,7 +17,8 @@
 A Development container configuration files or "definitions" for developing and training [Tensorflow](https://tensorflow.org) models using VScode [Remote - Container](https://aka.ms/vscode-remote/download/containers) extension.
 
 * Lets you develope and train Tensorflow models in a container, without any hustle of installing Tensorflow and other dependencies on your local machine.
-* Supports both CPU and GPU based Tensorflow models. To use Tesorflow-GPU, change the build argument in `.devcontainer/devcontainer.json` file from `TAG=2.X.X` to `TAG=2.X.X-gpu` and rebuild the container.(NOTE: Tensorflow-GPU is not tested, if anyonne has GPU on their machine do try it and update the repo.)
+* Supports both CPU and GPU based Tensorflow models. 
+* To use Tesorflow-GPU, change the build argument in `.devcontainer/devcontainer.json` file from `TAG=2.X.X` to `TAG=2.X.X-gpu` and uncomment the runArgs for GPU then rebuild the container.
 * Creates a typical Tensorflow project directory structure in the container.
 * The container includes zsh as default shell.
 
